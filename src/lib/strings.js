@@ -3,8 +3,8 @@ let sayHello = (string) => {
   if (string === "world") {
     greeting = "Hello, world!";
   }
-  else if (string === "MCR Codes") {
-    greeting = "Hello, MCR Codes!";
+  else if (string === "MCRCodes") {
+    greeting = "Hello, MCRCodes!";
   }
   else if (string === "fsghjdfkhgf") {
     greeting = "Hello, fsghjdfkhgf!";
@@ -28,8 +28,8 @@ const firstCharacter = string => {
   return string.substring(0, 1); 
 };
 
-const firstCharacters = (string, n) => {
-  return string.substring(0, n);
+const firstCharacters = (string, length) => {
+  return string.slice(0, length);
 };
 
 module.exports = {

@@ -16,7 +16,11 @@ const { negate } = require('./lib/booleans');
 const { truthiness } = require('./lib/booleans');
 const { isOdd } = require('./lib/booleans');
 const { startsWith } = require('./lib/booleans');
-
+const { getNthElement} = require('./lib/arrays');
+const { arrayToCSVString } = require('./lib/arrays');
+const { addToArray2 } = require('./lib/arrays');
+const { elementsStartingWithAVowel } = require('./lib/arrays');
+const { removeNthElement2 } = require('./lib/arrays');
 
 app.get('/strings/hello/:string', (req, res) => {
   res.json({ result: sayHello(req.params.string) });
@@ -136,6 +140,31 @@ app.get('/booleans/:string/starts-with/:letter', (req, res) => {
   else {
   res.json({ result: startsWith(req.params.letter, req.params.string) });
   }
+});
+
+app.post('/arrays/element-at-index/:index', (req, res) => {
+  res.json({ result: getNthElement(req.params.index, req.body.array) });
+});
+
+app.post('/arrays/to-string', (req, res) => {
+  res.json({ result: arrayToCSVString(req.body.array) });
+});
+
+app.post('/arrays/append', (req, res) => {
+  res.json({ result: addToArray2(req.body.value, req.body.array) });
+});
+
+app.post('/arrays/starts-with-vowel', (req, res) => {
+  res.json({ result: elementsStartingWithAVowel(req.body.array) });
+});
+
+app.post('/arrays/remove-element', (req, res) => {
+  res.json({ result: removeNthElement2(0, req.body.array) });
+});
+
+app.post('/arrays/remove-specific-element', (req, res) => {
+  const index = parseInt(req.query.index)
+  res.json({ result: removeNthElement2(index, req.body.array) });
 });
 
 module.exports = app;

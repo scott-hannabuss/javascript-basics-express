@@ -16,7 +16,7 @@ const csvStringToArray = string => {
   return answer;
 };
 
-const addToArray = (element, array) => {
+const addtoarray = (element, array) => {
   array.push(element)
 };
 
@@ -96,7 +96,7 @@ module.exports = {
   getNthElement,
   arrayToCSVString,
   csvStringToArray,
-  addToArray,
+  addtoarray,
   addToArray2,
   removeNthElement,
   numbersToStrings,

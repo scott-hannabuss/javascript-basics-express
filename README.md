@@ -1,5 +1,7 @@
 # JavaScript Basics in Express
 
+A bootcamp exercise underlining 
+
 ## Getting started
 
 Ensure your Visual Studio Code application is up to date, and that you have the [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) installed and enabled.
@@ -33,6 +35,3 @@ src
 
 You can run tests with the `npm test` command.
 
-## Remember: READMEs are important!
-
-When you're finished, be sure to rewrite this one so it's more specific to your project.

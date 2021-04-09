@@ -1,6 +1,6 @@
 # JavaScript Basics in Express
 
-A web API that makes a series of basic javascript functions accessible through HTTP requests.
+An API that makes a series of basic javascript functions accessible through HTTP requests.
 
 The project is designed to give an overview on the basics of RESTful APIs and how they operate.
 

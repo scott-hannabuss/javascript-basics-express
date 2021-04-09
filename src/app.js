@@ -22,6 +22,8 @@ const { addToArray2 } = require('./lib/arrays');
 const { elementsStartingWithAVowel } = require('./lib/arrays');
 const { removeNthElement2 } = require('./lib/arrays');
 
+// establishes what functions will be used and what response will be sent to the user from various HTTP requests
+
 app.get('/strings/hello/:string', (req, res) => {
   res.json({ result: sayHello(req.params.string) });
 });
